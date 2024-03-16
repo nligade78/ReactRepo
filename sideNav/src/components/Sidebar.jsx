@@ -3,7 +3,7 @@ import {FaCog, FaHome, FaPoll, FaRegEnvelope, FaRegFileAlt} from 'react-icons/fa
 
 const Sidebar = ({sidebarToggle}) => {
   return (
-    <div className={` ${sidebarToggle? "hidden " : "block"}w-64 bg-gray-800 fixed h-full px-4 py-2`}>
+    <div className={` ${sidebarToggle? "hidden " : "block"} w-64 bg-gray-800 fixed h-full px-4 py-2`}>
             <div className='my-2 mb-4'>
                 <h1 className='text-2x text-white font-bold'>Admin Dasboard</h1>
             </div>
