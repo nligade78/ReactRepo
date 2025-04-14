@@ -11,10 +11,10 @@ function BmiCalculator() {
       };
       
 
-      const heightSet = (e) => {
-        const height = parseFloat(e.target.value);
-        setHeight(height || 0);
-      };
+    //   const heightSet = (e) => {
+    //     const height = parseFloat(e.target.value);   instead of using this function, we can use the onChange event directly in the input field
+    //     setHeight(height || 0);
+    //   };
 
     const CalculateBMI = () => {
         const heightInMeter = height * 0.0254;
@@ -39,7 +39,7 @@ function BmiCalculator() {
         <span>Weight(lbs)</span>
         <input type="number" placeholder="Enter Weight Value"  value={weight} onChange={weightSet}/>
         <span>Height(in)</span>
-        <input type="number" placeholder="Enter Height Value"   value={height} onChange={heightSet}/>
+        <input type="number" placeholder="Enter Height Value"   value={height} onChange={(event)=> setHeight(event.target.value)}/>  
       </div>
       <div className="buttons">
         <button onClick={CalculateBMI}>Submit</button>
